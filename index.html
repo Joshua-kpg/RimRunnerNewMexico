@@ -2507,6 +2507,15 @@ function pickWeekGames() {
     if (used.has(x.g.homeId) || used.has(x.g.awayId)) continue;
     extras.push(x); used.add(x.g.homeId); used.add(x.g.awayId);
   }
+  // Still short of 10 (thin opening week where a team plays twice the same day, e.g. Carrizozo Nov 21): top up from the remaining
+  // week games even if a team repeats; never the same game twice.
+  if (locked.length + extras.length < 10) {
+    const have = new Set(locked.concat(extras).map(x => x.g.id));
+    for (const x of mapped) {
+      if (locked.length + extras.length >= 10) break;
+      if (!have.has(x.g.id)) { extras.push(x); have.add(x.g.id); }
+    }
+  }
   return locked.concat(extras);
 }
 function coverNeed(g) {
