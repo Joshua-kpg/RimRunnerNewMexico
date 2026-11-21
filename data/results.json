@@ -1,4 +1,18 @@
 {
  "about": "RimRunnerNewMexico 2026-27 finals ledger, written by scripts/update_scores.py. Keyed by MaxPreps contest id. homeMp/awayMp are MaxPreps team ids. state: applied | unlisted (one team not in our list; counts for records only) | pending (final between listed teams with no scheduled game yet; awaiting team-page check) | ignored.",
- "finals": {}
+ "finals": {
+  "6e856584-2134-481f-8efb-0d61caeecaa2": {
+   "awayMp": "4de2e80c-8169-4819-9c3d-2fe6ae95fb79",
+   "awayScore": 61,
+   "date": "2026-11-21",
+   "forfeit": false,
+   "gameId": "nm26-0003",
+   "homeMp": "18201788-1b1e-485d-b543-b8e1d0e8fe60",
+   "homeScore": 10,
+   "neutral": null,
+   "source": "scores-page",
+   "state": "applied",
+   "winner": "away"
+  }
+ }
 }
